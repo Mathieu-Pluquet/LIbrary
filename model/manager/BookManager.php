@@ -11,5 +11,11 @@ public function setDb(PDO $db)
 {
     $this->db = $db;
 }
+
+// display list
+public function getList() {
+$q=$this->db->query("SELECT * FROM book");
+return $q->fetchAll(PDO::FETCH_ASSOC);
+}
 }
  ?>

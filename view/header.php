@@ -12,7 +12,7 @@
   <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-3 maa">Bank</h1>
+            <h1 class="display-3 maa">Library</h1>
 
             <!-- navbar -->
             <nav class="navbar navbar-toggleable-md navbar-light bg">
@@ -23,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Home</a>
+                            <a class="nav-link" href="">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?add">Add Account</a>
+                            <a class="nav-link" href="">User</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="with_add.php?trans">Transfer money</a>
+                            <a class="nav-link" href="">Add book</a>
                         </li>
                     </ul>
                 </div>
