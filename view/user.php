@@ -15,13 +15,9 @@ include 'view/header.php';
             <table class="table-fill">
                 <thead>
                     <tr>
-                        <th class="text-center">Title</th>
-                        <th class="text-center">Author</th>
-                        <th class="text-center">Resume</th>
-                        <th class="text-center">Date</th>
-                        <th class="text-center">Delete</th>
-                        <th class="text-center">details</th>
-
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Surname</th>
+                        <th class="text-center">Member</th>
 
                     </tr>
                 </thead>
@@ -33,22 +29,13 @@ include 'view/header.php';
                     <tbody class="table-hover">
                         <tr>
                             <td class="text-left text-center">
-                                <?php  echo $value->getTitle(); ?>
+                                <?php  echo $value->getName(); ?>
                             </td>
                             <td class="text-left text-center">
-                                <?php echo $value->getAuthor(); ?>
+                                <?php echo $value->getSurname(); ?>
                             </td>
                             <td class="text-left text-center">
-                                <?php echo $value->getResume(); ?>
-                            </td>
-                            <td class="text-left text-center">
-                                <?php echo $value->getDate(); ?>
-                            </td>
-                            <td class="text-left text-center">
-                  <a class="maa" href="?delete=<?php echo $value->getId();?>">  <i class="fa fa-trash" aria-hidden="true">  </i>   </a>
-                            </td>
-                            <td class="text-left text-center">
-                              <a class="maa" id="no" href="index.php?id=<?php echo $value->getId();?>">Details</a>
+                                <?php echo $value->getMember(); ?>
                             </td>
                         </tr>
                     </tbody>
