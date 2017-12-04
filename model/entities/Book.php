@@ -63,7 +63,7 @@
      * @param string title
      *
      */
-    public function setTitle($title)
+    public function setTitle(string $title)
     {
         $this->title = $title;
 
@@ -86,7 +86,7 @@
      * @param string author
      *
      */
-    public function setAuthor($author)
+    public function setAuthor(string $author)
     {
         $this->author = $author;
 
@@ -109,7 +109,7 @@
      * @param string resume
      *
      */
-    public function setResume($resume)
+    public function setResume(string $resume)
     {
         $this->resume = $resume;
 
@@ -132,7 +132,7 @@
      * @param date date
      *
      */
-    public function setDate($date)
+    public function setDate( $date)
     {
         $this->date = $date;
 

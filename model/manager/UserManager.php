@@ -17,5 +17,7 @@ public function getList() {
 $q=$this->db->query("SELECT * FROM user");
 return $q->fetchAll(PDO::FETCH_ASSOC);
 }
+
+
 }
  ?>

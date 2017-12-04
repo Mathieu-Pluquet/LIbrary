@@ -48,5 +48,14 @@ public function getSort($category){
   return $book;
 }
 
+// update available
+public function update($book){
+  $q=$this->db->prepare("UPDATE book set available=:available where id_book=:id");
+  $q->bindValue(':id',$book->getIdBook());
+  $q->bindValue(':available',$book->getAvailable());
+  $q->execute();
+}
+
+
 }
  ?>

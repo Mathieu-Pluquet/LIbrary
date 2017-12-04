@@ -24,6 +24,31 @@ include 'view/header.php';
                     <p class="">Resume : <?php echo $book->getResume()?></p>
                     <p>Date : <?php echo $book->getDate()?></p>
                     <p>Available : <?php echo $book->getAvailable()?></p>
+                    <?php
+                    if($book->getAvailable() == 1){
+                     ?>
+                     <form class="" action="index.php" method="post">
+                     <select class="" name="category">
+                       <?php
+                       // dropdown type const
+                       foreach ($user as $value) {
+                       ?>
+                       <option value="<?php echo $user->getIdUser() ?>"> <?php echo $user->getName() ?></option>
+                       <?php
+                         }
+                        ?>
+                     </select>
+                     <input type="submit" name="ok" value="ok">
+
+                     </form>
+                      <?php
+                      }
+                      else {
+                        ?>
+                      <input type="submit" name="return" value="Return">
+                        <?php
+                      }
+                       ?>
                   </ul>
 
                     </div>
