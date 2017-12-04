@@ -31,13 +31,14 @@ include 'view/header.php';
                      <select class="" name="category">
                        <?php
                        // dropdown type const
-                       foreach ($user as $value) {
+                       foreach ($object as $value) {
                        ?>
-                       <option value="<?php echo $user->getIdUser() ?>"> <?php echo $user->getName() ?></option>
+                       <option value="<?php echo $value->getIdUser() ?>"> <?php echo $value->getName() ?></option>
                        <?php
                          }
                         ?>
                      </select>
+                     <input type="hidden" name="id" value="<?php echo $book->getIdBook()?>">
                      <input type="submit" name="ok" value="ok">
 
                      </form>

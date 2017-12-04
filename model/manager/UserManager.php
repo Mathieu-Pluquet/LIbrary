@@ -18,6 +18,13 @@ $q=$this->db->query("SELECT * FROM user");
 return $q->fetchAll(PDO::FETCH_ASSOC);
 }
 
+public function get($id){
+$q=$this->db->prepare("SELECT * from user where id_user=:id");
+$q->bindValue(":id",$id);
+$q->execute();
+return new user($q->fetch());
+}
+
 
 }
  ?>

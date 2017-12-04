@@ -179,7 +179,7 @@
      * @param mixed id_user
      *
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
 
