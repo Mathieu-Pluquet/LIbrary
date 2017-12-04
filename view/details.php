@@ -17,8 +17,15 @@ include 'view/header.php';
         <tr>
             <td>
                 <form class="test" action="index.php" method="post">
-                    <div class="test center">
-                      <p><?php echo $book->getTitle()?></p>
+                    <div class="test center mar">
+                  <ul>
+                    <p class="b">Title : <?php echo $book->getTitle()?></p>
+                    <p class="">Author : <?php echo $book->getAuthor()?></p>
+                    <p class="">Resume : <?php echo $book->getResume()?></p>
+                    <p>Date : <?php echo $book->getDate()?></p>
+                    <p>Available : <?php echo $book->getAvailable()?></p>
+                  </ul>
+
                     </div>
                     <input class="maaa" type="hidden" name="id" value="<?php echo $book->getIdBook()?>"> <br>
                 </form>

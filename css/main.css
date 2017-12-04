@@ -251,6 +251,15 @@ textarea {
      padding-bottom: 50px;
    }
 
+   .mar {
+    text-align: left;
+    font-weight: bold;
+    color: black;
+   }
+
+
+
+
 
 /* ==========================================================================
    Helper classes

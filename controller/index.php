@@ -13,7 +13,6 @@ $data[$key]=strip_tags($value);
   $manager->add($book);
 }
 
-
 // return add page or index page
 if(isset($_GET['add'])){
   include 'view/add.php';
@@ -24,11 +23,17 @@ else if (isset($_GET['id'])){
   include 'view/details.php';
 }
 else {
+  if(isset($_POST['sortbook'])){
+  $object = $manager->getSort($_POST['category']);
+  }
+  else
+  {
 // display getList
 $list = $manager->getList();
 foreach ($list as $key => $value) {
   $object[$key]= new Book($value);
 }
 include 'view/index.php';
+}
 }
  ?>

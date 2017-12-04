@@ -39,12 +39,13 @@ return $q->fetchAll(PDO::FETCH_ASSOC);
 
 // display book for getCategory
 public function getSort($category){
-  $q=$this->db->prepare("SELECT * from book where category=?");
+  $q=$this->db->prepare("SELECT * from book where category = ?");
   $q->execute(array($category));
   $book = $q->fetchAll(PDO::FETCH_ASSOC);
   foreach ($book as $key => $value) {
-    $object[$key]= new Book($value);
+    $book[$key]= new Book($value);
   }
+  return $book;
 }
 
 }

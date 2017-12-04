@@ -16,6 +16,7 @@ include 'view/header.php';
             <table class="table-fill">
                 <thead>
                   <tr>
+                    <form class="" action="index.php" method="post">
                     <select class="" name="category">
                       <?php
                       // dropdown type const
@@ -27,6 +28,9 @@ include 'view/header.php';
                        ?>
                     </select>
                     <input type="submit" name="sortbook" value="Sort Book">
+
+                    </form>
+
                   </tr>
 
                     <tr>
