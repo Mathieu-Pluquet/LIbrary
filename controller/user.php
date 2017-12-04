@@ -9,6 +9,7 @@ foreach ($list as $key => $value) {
   $object[$key]= new User($value);
 }
 if(isset($_GET['user'])){
+  var_dump($object);
   include 'view/user.php';
 }
  ?>

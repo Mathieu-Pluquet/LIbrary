@@ -11,10 +11,26 @@ include 'view/header.php';
     </head>
 
     <body>
+
         <div class="table-title tab hidden-md-down">
             <table class="table-fill">
                 <thead>
+                  <tr>
+                    <select class="" name="category">
+                      <?php
+                      // dropdown type const
+                      foreach (Book::category as $value) {
+                      ?>
+                      <option value="<?php echo $value ?>"> <?php echo $value ?></option>
+                      <?php
+                        }
+                       ?>
+                    </select>
+                    <input type="submit" name="sortbook" value="Sort Book">
+                  </tr>
+
                     <tr>
+
                         <th class="text-center">Title</th>
                         <th class="text-center">Author</th>
                         <th class="text-center">Resume</th>
@@ -45,10 +61,10 @@ include 'view/header.php';
                                 <?php echo $value->getDate(); ?>
                             </td>
                             <td class="text-left text-center">
-                  <a class="maa" href="?delete=<?php echo $value->getId();?>">  <i class="fa fa-trash" aria-hidden="true">  </i>   </a>
+                  <a class="maa" href="?delete=<?php echo $value->getIdBook();?>">  <i class="fa fa-trash" aria-hidden="true">  </i>   </a>
                             </td>
                             <td class="text-left text-center">
-                              <a class="maa" id="no" href="index.php?id=<?php echo $value->getId();?>">Details</a>
+                              <a class="maa" id="no" href="index.php?id=<?php echo $value->getIdBook();?>">Details</a>
                             </td>
                         </tr>
                     </tbody>

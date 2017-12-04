@@ -6,6 +6,28 @@ class User
   private $surname;
   private $member;
 
+  // construct and hydrate
+    /**
+        * @param array $donnees
+        */
+       public function __construct($donnees)
+       {
+           $this->hydrate($donnees);
+       }
+
+       /**
+        * @param  array  $donnees
+        */
+       public function hydrate($donnees)
+       {
+           foreach ($donnees as $key => $value) {
+               $method = 'set'.ucfirst($key);
+
+               if (method_exists($this, $method)) {
+                   $this->$method($value);
+               }
+           }
+       }
 
     /**
      * Get the value of Id User
@@ -23,7 +45,7 @@ class User
      * @param int id_user
      *
      */
-    public function setIdUser($id_user)
+    public function setId_user($id_user)
     {
         $this->id_user = $id_user;
 

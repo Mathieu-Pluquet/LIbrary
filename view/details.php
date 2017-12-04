@@ -18,10 +18,9 @@ include 'view/header.php';
             <td>
                 <form class="test" action="index.php" method="post">
                     <div class="test center">
-                      <input class="maaa" type="text" name="title" value="<?php echo $book->getTitle()?>"> <br>
-
+                      <p><?php echo $book->getTitle()?></p>
                     </div>
-                    <input class="maaa" type="hidden" name="id" value="<?php echo $book->getId()?>"> <br>
+                    <input class="maaa" type="hidden" name="id" value="<?php echo $book->getIdBook()?>"> <br>
                 </form>
             </td>
       </tr>

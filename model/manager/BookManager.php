@@ -25,7 +25,7 @@ public function add ($book) {
 
 // recover id
 public function get($id){
-$q=$this->db->prepare("SELECT * from account where id=:id");
+$q=$this->db->prepare("SELECT * from book where id_book=:id");
 $q->bindValue(":id",$id);
 $q->execute();
 return $q->fetch(PDO::FETCH_ASSOC);
@@ -35,6 +35,16 @@ return $q->fetch(PDO::FETCH_ASSOC);
 public function getList() {
 $q=$this->db->query("SELECT * FROM book");
 return $q->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// display book for getCategory
+public function getSort($category){
+  $q=$this->db->prepare("SELECT * from book where category=?");
+  $q->execute(array($category));
+  $book = $q->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($book as $key => $value) {
+    $object[$key]= new Book($value);
+  }
 }
 
 }

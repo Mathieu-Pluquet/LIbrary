@@ -13,11 +13,14 @@ $data[$key]=strip_tags($value);
   $manager->add($book);
 }
 
+
 // return add page or index page
 if(isset($_GET['add'])){
   include 'view/add.php';
 }
 else if (isset($_GET['id'])){
+  $get=$manager->get($_GET['id']);
+  $book = new Book ($get);
   include 'view/details.php';
 }
 else {

@@ -36,30 +36,6 @@
          }
 
 
-
-    /**
-     * Get the value of Id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set the value of Id
-     *
-     * @param int id
-     *
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
     public function setCategory($category){
       if(in_array($category, static::category)){
         $this->category=$category;
@@ -180,7 +156,7 @@
      * @param mixed id_book
      *
      */
-    public function setIdBook($id_book)
+    public function setId_book($id_book)
     {
         $this->id_book = $id_book;
 
