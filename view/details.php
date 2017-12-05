@@ -11,7 +11,7 @@ include 'view/header.php';
 
 <body>
 
-<table class="table-fill hidden-md-down">
+<table class="table-fill ">
   <th class="test">Details</th>
     <tbody class="table-hover">
         <tr>

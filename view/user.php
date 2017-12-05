@@ -43,3 +43,39 @@ include 'view/header.php';
                     }?>
             </table>
         </div>
+
+
+
+
+        <!-- responsive mobile  -->
+
+
+
+        <div class="table-title tab hidden-lg-up">
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Member</th>
+
+                    </tr>
+                </thead>
+
+                <!-- display board -->
+
+                  <?php
+                    foreach ($object as $value) {?>
+                    <tbody class="table-hover">
+                        <tr>
+                            <td class="text-left text-center">
+                                <?php  echo $value->getName(); ?>
+                            </td>
+                            <td class="text-left text-center">
+                                <?php echo $value->getMember(); ?>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <?php
+                    }?>
+            </table>
+        </div>

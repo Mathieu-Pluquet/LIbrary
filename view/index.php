@@ -16,6 +16,7 @@ include 'view/header.php';
             <table class="table-fill">
                 <thead>
                   <tr>
+                    <div class="cent">
                     <form class="" action="index.php" method="post">
                     <select class="" name="category">
                       <?php
@@ -30,7 +31,7 @@ include 'view/header.php';
                     <input type="submit" name="sortbook" value="Sort Book">
 
                     </form>
-
+                        </div>
                   </tr>
 
                     <tr>
@@ -39,7 +40,6 @@ include 'view/header.php';
                         <th class="text-center">Author</th>
                         <th class="text-center">Resume</th>
                         <th class="text-center">Date</th>
-                        <th class="text-center">Delete</th>
                         <th class="text-center">details</th>
 
 
@@ -65,7 +65,65 @@ include 'view/header.php';
                                 <?php echo $value->getDate(); ?>
                             </td>
                             <td class="text-left text-center">
-                  <a class="maa" href="?delete=<?php echo $value->getIdBook();?>">  <i class="fa fa-trash" aria-hidden="true">  </i>   </a>
+                              <a class="maa" id="no" href="index.php?id=<?php echo $value->getIdBook();?>">Details</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <?php
+                    }?>
+            </table>
+        </div>
+
+
+
+
+        <!-- responsive mobile -->
+
+
+        <div class="table-title tab hidden-lg-up">
+            <table class="table-fill">
+                <thead>
+                  <tr>
+                    <div class="cent">
+                    <form class="" action="index.php" method="post">
+                    <select class="" name="category">
+                      <?php
+                      // dropdown type const
+                      foreach (Book::category as $value) {
+                      ?>
+                      <option value="<?php echo $value ?>"> <?php echo $value ?></option>
+                      <?php
+                        }
+                       ?>
+                    </select>
+                    <input type="submit" name="sortbook" value="Sort Book">
+
+                    </form>
+                      </div>
+
+                  </tr>
+
+                    <tr>
+
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Author</th>
+                        <th class="text-center">details</th>
+
+
+                    </tr>
+                </thead>
+
+                <!-- display board -->
+
+                  <?php
+                    foreach ($object as $value) {?>
+                    <tbody class="table-hover">
+                        <tr>
+                            <td class="text-left text-center">
+                                <?php  echo $value->getTitle(); ?>
+                            </td>
+                            <td class="text-left text-center">
+                                <?php echo $value->getAuthor(); ?>
                             </td>
                             <td class="text-left text-center">
                               <a class="maa" id="no" href="index.php?id=<?php echo $value->getIdBook();?>">Details</a>
