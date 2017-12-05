@@ -153,10 +153,10 @@
     /**
      * Set the value of Id Book
      *
-     * @param mixed id_book
+     * @param int id_book
      *
      */
-    public function setId_book($id_book)
+    public function setId_book(int $id_book)
     {
         $this->id_book = $id_book;
 
@@ -166,7 +166,7 @@
     /**
      * Get the value of Id User
      *
-     * @return mixed
+     * @return int
      */
     public function getIdUser()
     {
@@ -176,10 +176,10 @@
     /**
      * Set the value of Id User
      *
-     * @param mixed id_user
+     * @param int id_user
      *
      */
-    public function setId_user($id_user)
+    public function setId_user(int $id_user)
     {
         $this->id_user = $id_user;
 
@@ -190,7 +190,7 @@
     /**
      * Get the value of Available
      *
-     * @return mixed
+     * @return boolean
      */
     public function getAvailable()
     {
@@ -200,10 +200,10 @@
     /**
      * Set the value of Available
      *
-     * @param mixed available
+     * @param boolean available
      *
      */
-    public function setAvailable($available)
+    public function setAvailable(int $available)
     {
         $this->available = $available;
 

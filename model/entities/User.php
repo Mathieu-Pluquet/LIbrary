@@ -45,7 +45,7 @@ class User
      * @param int id_user
      *
      */
-    public function setId_user($id_user)
+    public function setId_user(int $id_user)
     {
         $this->id_user = $id_user;
 
@@ -68,7 +68,7 @@ class User
      * @param string name
      *
      */
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
 
@@ -91,7 +91,7 @@ class User
      * @param string surname
      *
      */
-    public function setSurname($surname)
+    public function setSurname(string $surname)
     {
         $this->surname = $surname;
 
@@ -114,7 +114,7 @@ class User
      * @param string member
      *
      */
-    public function setMember($member)
+    public function setMember(string $member)
     {
         $this->member = $member;
 
