@@ -11,7 +11,7 @@ include 'view/header.php';
 
 <body>
 
-<table class="table-fill ">
+<table class="table-fill">
   <th class="test">Details</th>
     <tbody class="table-hover">
         <tr>
@@ -46,6 +46,7 @@ include 'view/header.php';
                       }
                       else {
                         ?>
+                      <input type="hidden" name="id" value="<?php echo $book->getIdBook()?>">
                       <input type="submit" name="return" value="Return">
                         <?php
                       }

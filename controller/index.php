@@ -16,9 +16,15 @@ $data[$key]=strip_tags($value);
 }
 
 if (isset ($_POST['return'])){
-  // $get=$manager->getAvailable() ==1;
-  // $book = new Book ($get);
-  // $manager->update($book);
+  // on recupere le book par rapport a l id de l'input hidden
+  $book = $manager->get($_POST['id']);
+  // on creer le livre
+  $book = new book($book);
+
+  // on set la valeur disponible a 1
+  $book->setAvailable(1);
+
+  $manager->update($book);
 }
 
 if(isset($_POST['ok'])){
