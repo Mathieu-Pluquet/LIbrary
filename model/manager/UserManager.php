@@ -18,6 +18,7 @@ $q=$this->db->query("SELECT * FROM user");
 return $q->fetchAll(PDO::FETCH_ASSOC);
 }
 
+// recover id
 public function get($id){
 $q=$this->db->prepare("SELECT * from user where id_user=:id");
 $q->bindValue(":id",$id);

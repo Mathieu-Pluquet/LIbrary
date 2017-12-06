@@ -37,15 +37,6 @@
          }
 
 
-    public function setCategory($category){
-      if(in_array($category, static::category)){
-        $this->category=$category;
-      }
-    }
-
-    public function getCategory() {
-      return $this->category;
-    }
 
 
     /**
@@ -239,6 +230,17 @@
 
         return $this;
     }
+
+
+        public function setCategory($category){
+          if(in_array($category, static::category)){
+            $this->category=$category;
+          }
+        }
+
+        public function getCategory() {
+          return $this->category;
+        }
 
 
 }
