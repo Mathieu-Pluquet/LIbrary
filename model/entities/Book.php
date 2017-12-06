@@ -8,6 +8,7 @@
     private $resume;
     private $date;
     private $available;
+    private $category;
 
     const category = ["novel", "poem", "adventure"];
 
@@ -209,6 +210,36 @@
 
         return $this;
     }
+
+
+    /**
+     * Set the value of Id Book
+     *
+     * @param mixed id_book
+     *
+     * @return self
+     */
+    public function setIdBook($id_book)
+    {
+        $this->id_book = $id_book;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of Id User
+     *
+     * @param mixed id_user
+     *
+     * @return self
+     */
+    public function setIdUser($id_user)
+    {
+        $this->id_user = $id_user;
+
+        return $this;
+    }
+
 
 }
 

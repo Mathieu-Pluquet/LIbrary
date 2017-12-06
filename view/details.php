@@ -46,8 +46,9 @@ include 'view/header.php';
                       }
                       else {
                         ?>
+                      <p>Member : <?php echo $user->getName()?></p>
                       <input type="hidden" name="id" value="<?php echo $book->getIdBook()?>">
-                      <input type="submit" name="return" value="Return">
+                      <input type="submit" name="return" value="Return book">
                         <?php
                       }
                        ?>

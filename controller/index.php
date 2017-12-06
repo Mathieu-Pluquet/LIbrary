@@ -40,6 +40,7 @@ $book = new book($book);
 $book->setAvailable(0);
 // si le livre est pu disponible un user la emprunter on rentre son id pour faire la jointure
 $book->setId_user($user->getIdUser());
+$manager->member($book);
 $manager->update($book);
 }
 
@@ -56,7 +57,6 @@ else if (isset($_GET['id'])){
   }
   // $user = $manager->member($book);
   $user = $manager1->get($book->getIdUser());
-  var_dump($user);
   include 'view/details.php';
 }
 else {

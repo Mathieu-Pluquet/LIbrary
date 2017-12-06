@@ -40,7 +40,8 @@ include 'view/header.php';
                         <th class="text-center">Author</th>
                         <th class="text-center">Resume</th>
                         <th class="text-center">Date</th>
-                        <th class="text-center">details</th>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Details</th>
 
 
                     </tr>
@@ -63,6 +64,9 @@ include 'view/header.php';
                             </td>
                             <td class="text-left text-center">
                                 <?php echo $value->getDate(); ?>
+                            </td>
+                            <td class="text-left text-center">
+                                <?php echo $value->getCategory(); ?>
                             </td>
                             <td class="text-left text-center">
                               <a class="maa" id="no" href="index.php?id=<?php echo $value->getIdBook();?>">Details</a>
