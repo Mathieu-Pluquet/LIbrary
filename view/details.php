@@ -16,6 +16,9 @@ include 'view/header.php';
     <tbody class="table-hover">
         <tr>
             <td>
+              <form class="lef" action="index.php" method="post">
+                <input type="submit" name="" value="return">
+              </form>
                 <form class="test" action="index.php" method="post">
                     <div class="test center mar">
                   <ul>

@@ -4,7 +4,6 @@ include 'model/connect.php';
 $manager = new BookManager($db);
 $manager1 = new UserManager($db);
 
-
 if (isset ($_POST['addbook']) && isset ($_POST['title']) && isset ($_POST['author']) && isset ($_POST['resume']) && isset ($_POST['date'])) {
     // removes HTML and PHP tags
 foreach ($_POST as $key => $value) {
@@ -56,7 +55,9 @@ else if (isset($_GET['id'])){
     $object[$key]= new User($value);
   }
   // $user = $manager->member($book);
+  if($book->getAvailable() == false ){
   $user = $manager1->get($book->getIdUser());
+}
   include 'view/details.php';
 }
 else {
