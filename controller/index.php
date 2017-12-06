@@ -5,7 +5,7 @@ $manager = new BookManager($db);
 $manager1 = new UserManager($db);
 
 
-if (isset ($_POST['addbook']) && isset ($_POST['title']) && isset ($_POST['author'])) {
+if (isset ($_POST['addbook']) && isset ($_POST['title']) && isset ($_POST['author']) && isset ($_POST['resume']) && isset ($_POST['date'])) {
     // removes HTML and PHP tags
 foreach ($_POST as $key => $value) {
 $data[$key]=strip_tags($value);
@@ -15,7 +15,7 @@ $data[$key]=strip_tags($value);
   $manager->add($book);
 }
 
-if (isset ($_POST['return'])){
+if (isset($_POST['return'])){
   // on recupere le book par rapport a l id de l'input hidden
   $book = $manager->get($_POST['id']);
   // on creer le livre
@@ -23,6 +23,7 @@ if (isset ($_POST['return'])){
 
   // on set la valeur disponible a 1
   $book->setAvailable(1);
+  $book->setId_user(null);
 
   $manager->update($book);
 }
@@ -39,7 +40,6 @@ $book = new book($book);
 $book->setAvailable(0);
 // si le livre est pu disponible un user la emprunter on rentre son id pour faire la jointure
 $book->setId_user($user->getIdUser());
-
 $manager->update($book);
 }
 
@@ -54,6 +54,9 @@ else if (isset($_GET['id'])){
   foreach ($list as $key => $value) {
     $object[$key]= new User($value);
   }
+  // $user = $manager->member($book);
+  $user = $manager1->get($book->getIdUser());
+  var_dump($user);
   include 'view/details.php';
 }
 else {

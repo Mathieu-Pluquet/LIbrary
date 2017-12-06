@@ -50,11 +50,19 @@ public function getSort($category){
 
 // update available
 public function update($book){
-  $q=$this->db->prepare("UPDATE book set available=:available and id_user =:idu where id_book=:id");
+  $q=$this->db->prepare("UPDATE book set available=:available , id_user =:idu where id_book=:id");
   $q->bindValue(':id',$book->getIdBook());
-  $q->bindValue(':idu',$book->getIdUser());
+  $q->bindValue(':idu',$book->getIduser());
   $q->bindValue(':available',$book->getAvailable());
   $q->execute();
+}
+
+// get member
+public function member(Book $book){
+$q=$this->db->prepare("SELECT * from book inner join user on user.id_user = book.id_user where id_book=:id");
+$q->bindValue(":id",$book->getIdBook());
+$q->execute();
+return $q->fetch();
 }
 
 

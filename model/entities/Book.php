@@ -179,9 +179,9 @@
      * @param int id_user
      *
      */
-    public function setId_user(int $id_user)
+    public function setId_user($iduser)
     {
-        $this->id_user = $id_user;
+        $this->id_user = $iduser;
 
         return $this;
     }
